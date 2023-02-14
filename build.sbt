@@ -20,3 +20,10 @@ lazy val coin_flip_cats = (project in file("./coin_flip_cats/"))
     name := "coin-flip-cats",
     idePackagePrefix := Some("com.sua.coin_flip_cats")
   )
+
+// pizza_pos_oop
+lazy val pizza_pos_oop = (project in file("./pizza_pos_oop/"))
+  .settings(
+    name := "pizza_pos_oop",
+    idePackagePrefix := Some("com.sua.pizza_pos_oop")
+  )
