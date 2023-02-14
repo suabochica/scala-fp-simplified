@@ -1,0 +1,12 @@
+bin/
+target/
+project/target/
+project/project/
+
+.idea/
+.bsp/
+
+.cache
+.classpath
+.project
+.settings
