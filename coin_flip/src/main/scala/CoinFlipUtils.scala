@@ -1,11 +1,11 @@
-package scala.main
+package com.sua.coin_flip
 
 import scala.util.Random
 import scala.io.StdIn.readLine
 
 object CoinFlipUtils {
   def showPrompt(): Unit = { print("\n (h)eads, (t)ails, or (q)uit: ")  }
-  def getUserInput(): String = readLine.trim.toUpperCase
+  def getUserInput: String = readLine.trim.toUpperCase
   def printableFlipResult(flip: String): String = flip match {
     case "H" => "Heads"
     case "T" => "Tails"

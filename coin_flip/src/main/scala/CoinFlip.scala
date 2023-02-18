@@ -1,7 +1,7 @@
-package scala.main
+package com.sua.coin_flip
 
+import CoinFlipUtils._
 import scala.annotation.tailrec
-import scala.main.CoinFlipUtils._
 import scala.util.Random
 
 case class GameState(numFlips: Int, numCorrect: Int)
@@ -13,10 +13,10 @@ object CoinFlip extends App {
   mainLoop(s, r)
 
   @tailrec
-  def mainLoop(gameState: GameState, random: Random) = {
+  def mainLoop(gameState: GameState, random: Random) :Unit = {
 
     showPrompt()
-    val userInput = getUserInput()
+    val userInput = getUserInput
 
     // handle result
     userInput match {
