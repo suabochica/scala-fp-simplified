@@ -1,16 +1,9 @@
-package coinflipcats
+package com.sua.coin_flip_cats
 
-import CoinFlipUtils.{
-  showPrompt,
-  getUserInput,
-  printableFlipResult,
-  printGameState,
-  printGameOver
-}
-import cats.effects.IO
+import CoinFlipUtilsCats._
 
-import scala.annotation.tailrec
-import scala.util.random
+import cats.effect.IO
+import scala.util.Random
 
 case class GameState(numFlips: Int, numCorrect: Int)
 
@@ -19,9 +12,9 @@ object CoinFlipCats extends App {
   val s = GameState(0, 0)
 
   def mainLoop(gameState: GameState, random: Random): IO[Unit] = for {
-    _ <- IO { showPromp() }
-    userInput <- IO { getUserInput() }
-    _ <- IO if (userInput == "H" | userInput == "T") for {
+    _ <- IO { showPrompt() }
+    userInput <- IO { getUserInput }
+    _ <- if (userInput == "H" | userInput == "T") for {
       // First line is a hack. It shuold be a generator
       _ <- IO { println("you said H or T") }
       coinTossResult = tossCoin(random)
@@ -37,28 +30,28 @@ object CoinFlipCats extends App {
       _ <- mainLoop(newGameState, random)
     } yield Unit
     else for {
-      _ <- IO { println("did no enter H or T")}
+      _ <- IO { println("did no enter H or T") }
       _ <- IO { printGameOver() }
       _ <- IO { printGameState(gameState) }
     } yield Unit
   } yield Unit
 
-  mainLoop(s, t).unsafeRunSync()
+  mainLoop(s, r).unsafeRunSync()
 
   private def createNewGameState(
     userInput: String,
     coinTossResult: String,
-    gameState: GameState
+    gameState: GameState,
     random: Random,
     newNumFlips: Int
   ): GameState = {
     if (userInput == coinTossResult) {
       val newNumCorrect = gameState.numCorrect + 1
-      val newGameState = copy(numFlips = newNumFlips, numCorrect = newNumCorrect)
+      val newGameState = gameState.copy(numFlips = newNumFlips, numCorrect = newNumCorrect)
 
       newGameState
     } else {
-      val newGameState = gameState.copy(numFlip = newNumFlips)
+      val newGameState = gameState.copy(numFlips = newNumFlips)
 
       newGameState
     }
@@ -70,7 +63,7 @@ object CoinFlipCats extends App {
     coinTossResult: String
   ): GameState = {
     val newNumCorrect = gameState.numCorrect + 1
-    val newGameState = copy(numFlips = newNumFlips, numCorrect = newNumCorrect)
+    val newGameState = gameState.copy(numFlips = newNumFlips, numCorrect = newNumCorrect)
 
     newGameState
   }
