@@ -9,7 +9,7 @@ trait OrderServiceInterface {
   /**
    * Implementing classes should provide their own database
    * that is an instance of the PizzaDaoInterface, such as
-   * MockPizzaDao, TestPizzaDao, or PorductPizzaDao
+   * MockPizzaDao, TestPizzaDao, or ProductPizzaDao
    * @return
    */
   protected def database: PizzaDaoInterface

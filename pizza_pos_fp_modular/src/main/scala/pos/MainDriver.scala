@@ -73,7 +73,17 @@ object MainDriver extends App {
   println(orderNo3)
 
   // j. Test function composition.
-  // k. Calculate the price of the current order (o3) using the
+  val pizzaComposition = updateCrustSize(
+    updateCrustType(
+      addTopping(
+        addTopping(pizzaNo2, Pepperoni),
+        Mushrooms
+      ),
+      ThickCrustType
+    ),
+    LargeCrustSize
+  )
 
+  // k. Calculate the price of the current order (o3) using the
 
 }
