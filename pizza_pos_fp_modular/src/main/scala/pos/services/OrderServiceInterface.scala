@@ -14,5 +14,5 @@ trait OrderServiceInterface {
    */
   protected def database: PizzaDaoInterface
 
-  def calculatorOrderPrice(o: Order): Money
+  def calculateOrderPrice(o: Order): Money
 }

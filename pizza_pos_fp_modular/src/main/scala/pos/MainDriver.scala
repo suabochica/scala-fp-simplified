@@ -85,5 +85,19 @@ object MainDriver extends App {
   )
 
   // k. Calculate the price of the current order (o3) using the
+  import com.sua.pizza_pos_fp_modular.pos.services.MockDatabaseOrderService.calculateOrderPrice
 
+  val orderPrice = calculateOrderPrice(orderNo3)
+  println(s"Order Price = $orderPrice")
+
+  // l. Remove a topping
+  val completePizza = Pizza(
+      MediumCrustSize,
+      RegularCrustType,
+      Seq(Cheese, Pepperoni, Pepperoni, Sausage)
+  )
+
+  val pizzaWithounPepperoni = removeTopping(completePizza, Pepperoni)
+  println("\nSHOULD BE Cheese/Pepperoni/Sausage:")
+  println(pizzaWithounPepperoni)
 }

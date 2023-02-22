@@ -8,5 +8,5 @@ import com.sua.pizza_pos_fp_modular.pos.models.Order
 object MockDatabaseOrderService extends AbstractOrderService {
   val database = MockPizzaDao
 
-  override def calculatorOrderPrice(o: Order): Money = ???
+  override def calculateOrderPrice(o: Order): Money = ???
 }
