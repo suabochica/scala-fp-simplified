@@ -34,3 +34,11 @@ lazy val pizza_pos_fp_modular = (project in file("./pizza_pos_fp_modular/"))
     name := "pizza_pos_fp_modular",
     idePackagePrefix := Some("com.sua.pizza_pos_fp_modular")
   )
+
+// pizza_pos_functional_objects
+lazy val pizza_pos_functional_objects = (project in file
+("./pizza_pos_functional_objects/"))
+  .settings(
+    name := "pizza_pos_functional_objects",
+    idePackagePrefix := Some("com.sua.pizza_pos_functional_objects")
+  )
