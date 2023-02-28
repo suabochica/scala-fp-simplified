@@ -5,7 +5,7 @@ package com.sua.pizza_pos_functional_objects
 case class Pizza (
                  crustSize: CrustSize,
                  crustType: CrustType,
-                 val toppings: Seq[Topping]
+                 toppings: Seq[Topping]
                  ) {
   // Model operations
   // --------------------------
@@ -19,7 +19,7 @@ case class Pizza (
   }
 
   def removeAllToppings(p: Pizza): Pizza = {
-    val newToppings = Seq[Topping]
+    val newToppings = Seq[Topping]()
     this.copy(toppings = newToppings)
   }
 
