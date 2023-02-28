@@ -29,8 +29,8 @@ object Driver extends App {
   println(s"Pizza 3 price:: $pizza3Price")
 
   // test  update method
-  val pizza4 = pizza1.addTopping(Olives)
-    .updateCrustSize(LargeCrustSize)
+  val pizza4 = pizza1.addTopping(Sausage)
+    .updateCrustSize(SmallCrustSize)
     .updateCrustType(ThickCrustType)
 
   println(s"Pizza 4 composition:: $pizza4")

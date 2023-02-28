@@ -1,7 +1,7 @@
 package com.sua.pizza_pos_functional_objects
 
 object MockPizzaDao {
-  def getToppingPrices: Map [Topping, Money] = {
+  def getToppingPrices(): Map [Topping, Money] = {
     Map(
       Cheese -> BigDecimal(1),
       Pepperoni -> BigDecimal(1),
@@ -10,7 +10,7 @@ object MockPizzaDao {
     )
   }
 
-  def getCrustSizePrices: Map[CrustSize, Money] = {
+  def getCrustSizePrices(): Map[CrustSize, Money] = {
     Map(
       SmallCrustSize -> BigDecimal(0),
       MediumCrustSize -> BigDecimal(1),
@@ -18,7 +18,7 @@ object MockPizzaDao {
     )
   }
 
-  def getCrustTypePrices: Map[CrustType, Money] = {
+  def getCrustTypePrices(): Map[CrustType, Money] = {
     Map(
       RegularCrustType -> BigDecimal(0),
       ThickCrustType -> BigDecimal(1),
