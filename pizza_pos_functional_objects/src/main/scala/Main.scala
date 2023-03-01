@@ -1,6 +1,6 @@
 package com.sua.pizza_pos_functional_objects
 
-object Driver extends App {
+object Main extends App {
   // initialize the data from the database
   val toppingPrices = MockPizzaDao.getToppingPrices()
   val crustSizePrices = MockPizzaDao.getCrustSizePrices()

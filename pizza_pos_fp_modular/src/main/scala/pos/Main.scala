@@ -4,7 +4,7 @@ package pos
 import pos.models._
 import pos.services.PizzaService
 
-object MainDriver extends App {
+object Main extends App {
   // Create a PizzaService instance to call its functions
   object PizzaService extends PizzaService
   import PizzaService._
