@@ -1,8 +1,7 @@
 bin/
+project/
 target/
 build/
-project/
-
 .cache
 .cache-main
 .classpath
