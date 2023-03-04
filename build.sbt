@@ -43,9 +43,8 @@ lazy val pizza_pos_functional_objects = (project in file
     idePackagePrefix := Some("com.sua.pizza_pos_functional_objects")
   )
 
-// io_monad_hello_world
-lazy val io_monad = (project in file
-("./io_monad/"))
+// io_monad
+lazy val io_monad = (project in file ("./io_monad/"))
   .settings(
     name := "io_monad",
     idePackagePrefix := Some("com.sua.io_monad")

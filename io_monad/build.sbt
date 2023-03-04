@@ -1,6 +1,6 @@
-name := "IOMonad"
+name := "io_monad"
 version := "1.0"
 scalaVersion := "2.12.2"
-resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases/"
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.2"
 scalacOptions += "-deprecation"
