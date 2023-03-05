@@ -49,3 +49,10 @@ lazy val io_monad = (project in file ("./io_monad/"))
     name := "io_monad",
     idePackagePrefix := Some("com.sua.io_monad")
   )
+
+// io_monad_cats
+lazy val io_monad_cats = (project in file ("./io_monad_cats/"))
+  .settings(
+    name := "io_monad_cats",
+    idePackagePrefix := Some("com.sua.io_monad_cats")
+  )
