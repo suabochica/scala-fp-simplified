@@ -56,3 +56,10 @@ lazy val io_monad_cats = (project in file ("./io_monad_cats/"))
     name := "io_monad_cats",
     idePackagePrefix := Some("com.sua.io_monad_cats")
   )
+
+// update_as_copy
+lazy val update_as_copy = (project in file ("./update_as_copy/"))
+  .settings(
+    name := "update_as_copy",
+    idePackagePrefix := Some("com.sua.update_as_copy")
+  )

@@ -1,0 +1,6 @@
+name := "update_as_copy"
+version := "1.0"
+scalaVersion := "2.12.2"
+resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases/"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.2"
+scalacOptions += "-deprecation"
