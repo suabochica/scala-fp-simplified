@@ -63,3 +63,9 @@ lazy val update_as_copy = (project in file ("./update_as_copy/"))
     name := "update_as_copy",
     idePackagePrefix := Some("com.sua.update_as_copy")
   )
+// recursion
+lazy val recursion = (project in file ("./recursion/"))
+  .settings(
+    name := "recursion",
+    idePackagePrefix := Some("com.sua.recursion")
+  )
